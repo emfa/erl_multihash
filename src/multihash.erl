@@ -55,21 +55,21 @@ hash_info('sha2-256') ->
 hash_info('sha2-512') ->
     {?SHA2_512, 64, fun (Bin) -> crypto:hash(sha512, Bin) end};
 hash_info('sha3-512') ->
-    {error, unimplemented};
+    error(unimplemented);
 hash_info('sha3-384') ->
-    {error, unimplemented};
+    error(unimplemented);
 hash_info('sha3-256') ->
-    {error, unimplemented};
+    error(unimplemented);
 hash_info('sha3-224') ->
-    {error, unimplemented};
+    error(unimplemented);
 hash_info('shake-128') ->
-    {error, unimplemented};
+    error(unimplemented);
 hash_info('shake-256') ->
-    {error, unimplemented};
+    error(unimplemented);
 hash_info('blake2b') ->
-    {error, unimplemented};
+    error(unimplemented);
 hash_info('blake2s') ->
-    {error, unimplemented}.
+    error(unimplemented).
 
 decode_function_code(Bin0) ->
     case varint:decode(Bin0) of
